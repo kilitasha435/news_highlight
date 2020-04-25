@@ -18,7 +18,7 @@ class TestArticle(unittest.TestCase):
         self.assertEqual(self.new_article.img, "random.jpg")
         self.assertEqual(self.new_article.date, "12/12/12")
         self.assertEqual(self.new_article.content, "None")
-     def setUp(self):
+    def setUp(self):
         """
         Set up method that will run before every Test
         """
