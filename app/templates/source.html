@@ -1,0 +1,36 @@
+{%extends "base.html"%}
+{%block content%}
+
+<br><br>
+<div class="container">
+    <div class="row m-0 p-o">
+    <div class="col-md-12 m-0 p-o">
+        {% for item in news_list %}
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 m-0 p-o">
+            <div class="content_area">
+                <div class="main_content floatleft">
+                    <div class="left_coloum floatleft">
+                        <div class="single_left_coloum_wrapper">
+                            <h2 class="title">{{source.tittle}}</h2>
+                            <div class="single_left_coloum floatleft">
+          
+                    <div class="col-md-5 text-md-left ml-3 mt-3">
+                        </a>
+                        <h4 class="h4 mb-4">{{source.title}}</h4>
+                        {%if source.content%}
+                            <p class="font-weight-normal">{{source.content | truncate(120)}}</p>
+                        {%endif%}
+                        <p class="font-weight-normal">by <a><strong>{{source.author}}</strong></a>, {{source.date[:10]}}
+                        </p>
+                        <a href="{{source.url}}" target="_blank" style="color: #fff;">
+                            <button style="background-color: #000;" class="btn">Read More  <i class="fas fa-link"></i></button>
+                        </a>
+                    </div>
+                </div>
+            </div> {% endcomment %}
+         
+            {%endfor%}
+        </div>
+    </div>
+</div>
+{%endblock%}
