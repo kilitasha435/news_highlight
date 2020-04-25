@@ -1,7 +1,7 @@
 # import requests
 # from .models import Article
 
-import requests
+import request
 from .models import Article
 
 # config api and urls
