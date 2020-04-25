@@ -1,23 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>NewsHighlight</title>
-    <!-- Fonts -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <!-- bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <!-- material design -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.9/css/mdb.min.css" rel="stylesheet">
-    <!-- jquery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- bootstrap tooltips -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-    <!-- bootstrap core javascript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+     <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <!-- Bootstrap core CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.9/css/mdb.min.css" rel="stylesheet">
+        <!-- JQuery -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
+
 <body>
+    <!--Navbar-->
+   <div class="container-fluid">
+        <nav class="navbar sticky-top navbar-inverse" role="navigation">
+    
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button> The NewsHighlight</a>
+        
+      
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false"style="font-size:24px;font-weight:Bold">Categories</a>
+                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                        
+            <div class="main_menu_area">
+        <ul id="nav">
+          <li><a href="#">world channels</a>
+            <ul>
+                {% for item in technology %}
+                <li><a href="/source/{{item.id}}&35">{{item.name}}</a></li>
+                {%endfor%}
+            </ul>
+          </li>
+          <li><a href="#">sports</a>
+            <ul>
+                    {% for item in sports %}
+                    <li><a href="/source/{{item.id}}&35">{{item.name}}</a></li>
+                    {%endfor%}
+            </ul>
+            </li>
+          <li><a href="#">Technology</a>
+            <ul>
+                    {% for item in technology %}
+                    <li><a href="/source/{{item.id}}&35">{{item.name}}</a></li>
+                    {%endfor%}
+
+                </ul>
+          </li>
+          <li><a href="#">Health</a>
+            <ul>
+                    {% for item in Health %}
+                    <li><a href="/source/{{item.id}}&35">{{item.name}}</a></li>
+                    {%endfor%}
+
+                </ul>
+          </li>
+          <li><a href="#">Business</a>
+            <ul>
+                    {% for item in business %}
+                    <li><a href="/source/{{item.id}}&35">{{item.name}}</a></li>
+                    {%endfor%}
+                </ul>
+        </li>
+
+          <li><a href="#">Entertainment</a>
+            <ul>
+                    {% for item in entertainment %}
+                    <li><a href="/source/{{item.id}}&35">{{item.name}}</a></li>
+                    {%endfor%}
+                    </li>
+            </ul>
+
+        </ul>
+      </div>
+            <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+        </div>
+    </nav>
+    <!--/.Navbar-->
+
+    {%block content%}
+    {%endblock%}
+
+    <!-- Footer -->
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 py-5">
+                    <div class="mb-5 flex-center">
+                        <!-- Facebook -->
+                        <a class="fb-ic" href="https://www.facebook.com/ruler.rules.37"  target="_blank">
+                            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <!-- Twitter -->
+                        <a class="tw-ic" href="https://twitter.com/cateh_cayreen_" target="_blank">
+                            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <!-- Google +-->
+                        <a class="gplus-ic" href="#">
+                            <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <!--Linkedin -->
+                        <a class="li-ic" href="https://www.linkedin.com/in/catherine-kituku-923170115/" target="_blank">
+                            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <!--Instagram-->
+                        <a class="ins-ic" href="https://www.instagram.com/nduku_cate/" target="_blank">
+                            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <!--Pinterest-->
+                        <a class="pin-ic" href="https://github.com/catherine244" target="_blank">
+                            <i class="fab fa-github fa-lg white-text fa-2x"> </i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="/"> The NewsHighlight</a>
+        </div>
+    </footer>
     
 </body>
+
 </html>

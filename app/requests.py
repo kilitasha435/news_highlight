@@ -1,8 +1,6 @@
-# import requests
-# from .models import Article
-
-import request
+import .requests
 from .models import Article
+from app import requests
 
 # config api and urls
 api_key = None
@@ -126,3 +124,5 @@ def search_article(article_name):
             search_article_results = process_artles(search_article_list)
 
     return search_article_results
+
+
