@@ -3,13 +3,78 @@
 <div class="container-fluid">
     <nav class="navbar sticky-top navbar-inverse" role="navigation">
         <div class="navbar-header">
-            <button class="navbar-toggle" type ="button" data-toggle="collapse" data-target=".navbar-collapse"> 
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <a href="">NewsHighlight</a>
             </button>
+
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a href="" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false"
+                        style="font-size: 24px;font-weight: bold;">Categories</a>
+                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                        <div class="main_menu_area">
+                            <ul id="nav">
+                                <li> <a href="#">Worls channels</a>
+                                    <ul>
+                                        {% for item in technology %}
+                                        <li><a href="/source/{{item.id}}&35">{{item.name}}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                                <li><a href="#">Sports</a>
+                                    <ul>
+                                        {% for item in sports %}
+                                        <li><a href="/source/{{item.id}}&35">{{item.name}}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                                <li><a href="#">Technology</a>
+                                    <ul>
+                                        {% for item in technology %}
+                                        <li><a href="/source/{{item.id}}$35">{{item.name}}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                                <li><a href="#">Health</a>
+                                    <ul>
+                                        {% for item in Health %}
+                                        <li><a href="/source/{{item.id}}&35">{{item.name}}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                                <li><a href="#">Business</a>
+                                    <ul>
+                                        {% for item in business %}
+                                        <li><a href="/source/{{item.id}}&35">{{item.name}}</a></li>
+                                        {%endfor%}
+                                    </ul>
+                                </li>
+                                <li><a href="#">Entertainment</a>
+                                    <ul>
+                                        {% for item in entertainment %}
+                                        <li><a href="/source/{{item.id}}&35">{{item.name}}</a></li>
+                                        {%endfor%}
+                                </li>
+                            </ul>
+
+
+            </ul>
+
         </div>
-    </nav>
+</div>
+<form action="" class="form-inline my-lg-0">
+    <input type="text" class="form-control mr-sm-2" id="" placeholder="Serach">
+    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+</form>
+
+</li>
+
+</ul>
+</div>
+</nav>
 </div>
