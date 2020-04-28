@@ -8,7 +8,7 @@ A user will have to click on `Read More` on a specific source to view artciles o
 
 
 ## Live Demo
-Click  to visit the live site.
+Click  to visit the live site https://news-highlights-kili.herokuapp.com/.
 
 
 ## Author
